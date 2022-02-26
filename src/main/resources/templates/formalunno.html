@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>FORM</title>
+</head>
+<body>
+	<h1>Benvenuto, inserire dati</h1>
+	<form action="#" th:action="@{/addalunno}" th:object="${alunno}"
+		method="post">
+		<p>
+			nome: <input type="text" th:field="*{nome}"/>
+		</p>
+
+		<p>
+			id: <input type="text" th:field="*{id}"/>
+		</p>
+
+		<p>
+			email: <input type="text" th:field="*{email}"/>
+		</p>
+		
+		<input type="submit" value="invia">
+		<input type="reset" value="reset">
+	</form>
+</body>
+</html>

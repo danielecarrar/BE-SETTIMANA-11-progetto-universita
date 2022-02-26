@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Tutti Gli Studenti</title>
+</head>
+<body style="background: aliceblue; text-align: center">
+	<h1 style="text-align: center">QUI TROVI TUTTI GLI STUDENTI
+		ISCRITTI!</h1>
+	<p style="background: yellow;">
+		<strong>Lista iscrizioni 2022</strong>
+	</p>
+	<div th:each="p: ${studenti}">
+		<div th:text="${p.toString()}"></div>
+		<br>
+		<hr>
+	</div>
+	<a href="corsi"><strong>CONTROLLA LA LISTA DEI CORSI
+			DISPONIBILI!</strong></a>
+	<br>
+	<br>
+	<a href="alunno"><strong>NUOVA ISCRIZIONE</strong></a>
+	<br>
+	<br>
+	<a href="elimina"><strong>ELIMINA ISCRIZIONE</strong></a>
+	<br>
+	<br>
+	<a href="update"><strong>AGGIORNA ISCRIZIONE ESISTENTE</strong></a>
+	<br>
+	<br>
+</body>
+</html>

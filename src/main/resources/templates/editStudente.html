@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Aggiornamento</title>
+</head>
+<body>
+	<h1>Modifica dati studente</h1>
+	<hr>
+	<form action="#" th:action="@{/update}" th:object="${studente}"
+		method="get">
+
+		<p>
+			ID: <input type="text" th:field="*{id}" />
+		</p>
+
+		<p>
+			Nome: <input type="text" th:field="*{nome}" />
+		</p>
+
+		<p>
+			Cognome: <input type="text" th:field="*{cognome}" />
+		</p>
+
+		<p>
+			Data Nascita: <input type="date" pattern="yyyy-MM-dd"
+				th:field="*{data}" />
+		</p>
+
+		<p>
+			Indirizzo: <input type="text" th:field="*{indirizzo}" />
+		</p>
+
+		<p>
+			Citta: <input type="text" th:field="*{citta}" />
+		</p>
+
+		<p>
+			Email: <input type="email" th:field="*{email}" />
+		</p>
+		<br>
+		<p>
+			<input type="submit" value="Invia" /> <input type="reset"
+				value="Reset" />
+		</p>
+
+
+	</form>
+	<a href="getstudenti"><strong>CONTROLLA LA LISTA DEGLI
+			STUDENTI!</strong></a>
+
+</body>
+</html>

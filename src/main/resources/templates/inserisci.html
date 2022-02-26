@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Nuovo Inserimento</title>
+</head>
+<body>
+<h1>Benvenuto, inserire dati</h1>
+<form action="#" th:action="@{/addalunno}" th:object="${alunno}"
+	method="post">
+	<p>
+		id: <input type="text" th:field="*{id}" />
+	</p>
+	<p>
+		nome: <input type="text" th:field="*{nome}" />
+	</p>
+	<p>
+		cognome: <input type="text" th:field="*{cognome}" />
+	</p>
+	<p>
+		email: <input type="text" th:field="*{email}" />
+	</p>
+	<p>
+		data di nascita: <input type="date" pattern="YYYY-MM-dd" th:field="*{data}" />
+	</p>
+	<p>
+		indirizzo: <input type="text" th:field="*{indirizzo}" />
+	</p>
+	<p>
+		citta: <input type="text" th:field="*{citta}" />
+	</p>
+
+	<input type="submit" value="invia"> <input type="reset"
+		value="reset">
+</form>
+
+</body>
+</html>

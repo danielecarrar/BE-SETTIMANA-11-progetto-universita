@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Eliminazione</title>
+</head>
+<body>
+	<h1>Inserire numero studente da eliminare</h1>
+	<form action="#" th:action="@{/eliminaalunno}" th:object="${studente}"
+		method="get">
+		<p>
+			Codice Studente: <input type="text" th:field="*{id}" />
+		</p>
+		<input type="submit" value="invia"> <input type="reset"
+		value="reset">
+	</form>
+</body>
+</html>
